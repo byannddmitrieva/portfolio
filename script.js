@@ -1,23 +1,37 @@
-
-document.body.classList.add('loading');
+document.documentElement.classList.add('js');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.body.classList.toggle('loading', !reducedMotion);
 
 const loader = document.querySelector('.loader');
 const count = document.querySelector('.loader-count');
 const line = document.querySelector('.loader-line i');
 let n = 0;
-const timer = setInterval(() => {
-  n += Math.ceil((100 - n) * .12);
-  if (n >= 99) n = 100;
-  count.textContent = String(n).padStart(2, '0');
-  line.style.width = n + '%';
-  if (n === 100) {
-    clearInterval(timer);
-    setTimeout(() => {
-      loader.classList.add('done');
-      document.body.classList.remove('loading');
-    }, 350);
-  }
-}, 45);
+let loaderDone = reducedMotion;
+let timer;
+
+function finishLoader(){
+  if(loaderDone) return;
+  loaderDone = true;
+  n = 100;
+  count.textContent = '100';
+  line.style.width = '100%';
+  clearInterval(timer);
+  setTimeout(() => {
+    loader.classList.add('done');
+    document.body.classList.remove('loading');
+  }, 180);
+}
+
+if(!reducedMotion){
+  timer = setInterval(() => {
+    n += Math.ceil((100 - n) * .12);
+    if(n >= 92) n = 92;
+    count.textContent = String(n).padStart(2, '0');
+    line.style.width = n + '%';
+  }, 45);
+  addEventListener('load', finishLoader, {once:true});
+  setTimeout(finishLoader, 900);
+}
 
 const progress = document.querySelector('.scroll-progress i');
 function updateProgress(){
@@ -30,10 +44,23 @@ updateProgress();
 
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if(e.isIntersecting) e.target.classList.add('in-view');
+    if(e.isIntersecting){
+      e.target.classList.add('in-view');
+      io.unobserve(e.target);
+    }
   });
 },{threshold:.08, rootMargin:'0px 0px -5% 0px'});
-document.querySelectorAll('.reveal-media').forEach(el => io.observe(el));
+
+document.querySelectorAll('.section-head, .project-row, .case-intro, .about-copy').forEach((el, index) => {
+  el.classList.add('reveal-content');
+  el.style.setProperty('--delay', `${(index % 7) * 45}ms`);
+});
+document.querySelectorAll('.case-gallery').forEach(gallery => {
+  gallery.querySelectorAll('.reveal-media').forEach((el, index) => {
+    el.style.setProperty('--delay', `${Math.min(index * 55, 220)}ms`);
+  });
+});
+document.querySelectorAll('.reveal-media, .reveal-content').forEach(el => io.observe(el));
 
 const cursor = document.querySelector('.cursor');
 if(matchMedia('(pointer:fine)').matches){
@@ -49,16 +76,27 @@ if(matchMedia('(pointer:fine)').matches){
 
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#menu');
-toggle.addEventListener('click', () => {
-  const open = menu.classList.toggle('open');
+const mobileNavigation = matchMedia('(max-width: 900px)');
+
+function setMenu(open, returnFocus = false){
+  menu.classList.toggle('open', open);
+  document.body.classList.toggle('menu-open', open);
   toggle.setAttribute('aria-expanded', open);
+  toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   toggle.textContent = open ? 'Close' : 'Menu';
+  if(open) menu.querySelector('a').focus();
+  else if(returnFocus) toggle.focus();
+}
+
+toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+addEventListener('keydown', e => {
+  if(e.key === 'Escape' && menu.classList.contains('open')) setMenu(false, true);
 });
-menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  menu.classList.remove('open');
-  toggle.setAttribute('aria-expanded', 'false');
-  toggle.textContent = 'Menu';
-}));
+const resetMenu = () => setMenu(false);
+if(mobileNavigation.addEventListener) mobileNavigation.addEventListener('change', resetMenu);
+else mobileNavigation.addListener(resetMenu);
+setMenu(false);
 
 // Subtle image movement on scroll
 const media = [...document.querySelectorAll('.media img')];
@@ -74,10 +112,12 @@ function parallax(){
   });
   ticking = false;
 }
-addEventListener('scroll', () => {
-  if(!ticking){
-    requestAnimationFrame(parallax);
-    ticking = true;
-  }
-},{passive:true});
-parallax();
+if(!reducedMotion && matchMedia('(pointer:fine)').matches){
+  addEventListener('scroll', () => {
+    if(!ticking){
+      requestAnimationFrame(parallax);
+      ticking = true;
+    }
+  },{passive:true});
+  parallax();
+}
