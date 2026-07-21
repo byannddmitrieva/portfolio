@@ -33,6 +33,10 @@ button{font:inherit;color:inherit;cursor:pointer}
 .site-header nav a{position:relative}
 .site-header nav a:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
 .site-header nav a:hover:after,.site-header nav a:focus-visible:after{transform:scaleX(1);transform-origin:left}
+.language-switcher{display:flex;align-items:center;gap:7px;margin-left:10px;font-size:11px;letter-spacing:.06em}
+.language-switcher a{display:inline-flex;align-items:center;justify-content:center;min-width:24px;min-height:24px;color:inherit;opacity:.52;transition:opacity .3s ease}
+.language-switcher a:hover,.language-switcher a:focus-visible,.language-switcher a[aria-current="page"]{opacity:1}
+.language-switcher a[aria-current="page"]:after{transform:scaleX(1)}
 .menu-toggle{display:none;border:0;background:none;padding:0}
 .arrow-icon{position:relative;display:inline-block;flex:0 0 auto;width:.9em;height:.9em;margin-left:.12em;vertical-align:-.04em;transform-origin:center}
 .arrow-icon:before{content:"";position:absolute;left:.1em;top:50%;width:.72em;height:1.5px;background:currentColor;transform:translateY(-50%) rotate(-45deg);transform-origin:center}
@@ -165,6 +169,9 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   .menu-open .site-header{mix-blend-mode:normal;color:#fff}
   .site-header nav a{display:flex;align-items:center;justify-content:center;min-width:44px;min-height:56px}
   .site-header nav a:after{display:none}
+  .site-header nav .language-switcher{display:flex;margin:22px 0 0;gap:5px;font-size:14px;letter-spacing:.08em}
+  .site-header nav .language-switcher a{min-width:44px;min-height:44px;opacity:.62}
+  .site-header nav .language-switcher a[aria-current="page"]{opacity:1;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
   .hero-label{margin-bottom:11vh}
   .hero h1{font-size:21vw}
   .hero h1 .serif{margin-left:0}
