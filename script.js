@@ -121,3 +121,76 @@ if(!reducedMotion && matchMedia('(pointer:fine)').matches){
   },{passive:true});
   parallax();
 }
+
+document.querySelectorAll('.motion-slider').forEach(slider => {
+  const slides = [...slider.querySelectorAll('.motion-slide')];
+  const counter = slider.querySelector('.motion-counter');
+  const previous = slider.querySelector('.motion-prev');
+  const next = slider.querySelector('.motion-next');
+  const viewport = slider.querySelector('.motion-viewport');
+  let activeIndex = 0;
+  let visible = false;
+  let touchStart = 0;
+
+  function activate(index){
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((video, videoIndex) => {
+      const active = videoIndex === activeIndex;
+      video.classList.toggle('is-active', active);
+      video.setAttribute('aria-hidden', String(!active));
+      video.controls = active && reducedMotion;
+      if(!active) video.pause();
+    });
+
+    const video = slides[activeIndex];
+    if(!video.src){
+      video.src = video.dataset.src;
+      video.load();
+    }
+    if(visible && !reducedMotion) video.play().catch(() => {});
+    counter.textContent = `${String(activeIndex + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+  }
+
+  previous.addEventListener('click', () => activate(activeIndex - 1));
+  next.addEventListener('click', () => activate(activeIndex + 1));
+  slider.addEventListener('keydown', event => {
+    if(event.key === 'ArrowLeft'){
+      event.preventDefault();
+      activate(activeIndex - 1);
+    }
+    if(event.key === 'ArrowRight'){
+      event.preventDefault();
+      activate(activeIndex + 1);
+    }
+  });
+  viewport.addEventListener('touchstart', event => {
+    touchStart = event.changedTouches[0].clientX;
+  }, {passive:true});
+  viewport.addEventListener('touchend', event => {
+    const distance = event.changedTouches[0].clientX - touchStart;
+    if(Math.abs(distance) > 45) activate(activeIndex + (distance < 0 ? 1 : -1));
+  }, {passive:true});
+
+  const videoObserver = new IntersectionObserver(entries => {
+    visible = entries[0].isIntersecting;
+    if(visible) activate(activeIndex);
+    else slides.forEach(video => video.pause());
+  }, {rootMargin:'200px 0px', threshold:.1});
+  videoObserver.observe(slider);
+});
+
+document.querySelectorAll('.case-video').forEach(video => {
+  if(reducedMotion) video.controls = true;
+
+  const observer = new IntersectionObserver(entries => {
+    const visible = entries[0].isIntersecting;
+    if(visible && !video.src){
+      video.src = video.dataset.src;
+      video.load();
+    }
+    if(visible && !reducedMotion) video.play().catch(() => {});
+    else video.pause();
+  }, {rootMargin:'200px 0px', threshold:.1});
+
+  observer.observe(video);
+});
