@@ -77,6 +77,7 @@ if(matchMedia('(pointer:fine)').matches){
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#menu');
 const mobileNavigation = matchMedia('(max-width: 900px)');
+let menuScrollY = 0;
 
 function setMenu(open, returnFocus = false){
   menu.classList.toggle('open', open);
@@ -84,14 +85,39 @@ function setMenu(open, returnFocus = false){
   toggle.setAttribute('aria-expanded', open);
   toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   toggle.textContent = open ? 'Close' : 'Menu';
-  if(open) menu.querySelector('a').focus();
-  else if(returnFocus) toggle.focus();
+  if(open && mobileNavigation.matches){
+    menuScrollY = scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${menuScrollY}px`;
+    document.body.style.width = '100%';
+    menu.querySelector('a').focus();
+  }else{
+    const wasLocked = document.body.style.position === 'fixed';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    if(wasLocked) scrollTo(0, menuScrollY);
+    if(returnFocus) toggle.focus();
+  }
 }
 
 toggle.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 addEventListener('keydown', e => {
-  if(e.key === 'Escape' && menu.classList.contains('open')) setMenu(false, true);
+  if(!menu.classList.contains('open')) return;
+  if(e.key === 'Escape') setMenu(false, true);
+  if(e.key === 'Tab'){
+    const focusable = [toggle, ...menu.querySelectorAll('a')];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if(e.shiftKey && document.activeElement === first){
+      e.preventDefault();
+      last.focus();
+    }else if(!e.shiftKey && document.activeElement === last){
+      e.preventDefault();
+      first.focus();
+    }
+  }
 });
 const resetMenu = () => setMenu(false);
 if(mobileNavigation.addEventListener) mobileNavigation.addEventListener('change', resetMenu);
