@@ -78,13 +78,19 @@ const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#menu');
 const mobileNavigation = matchMedia('(max-width: 900px)');
 let menuScrollY = 0;
+const menuLanguage = document.documentElement.lang;
+const menuLabels = {
+  en: {open:'Menu', close:'Close', openAria:'Open navigation', closeAria:'Close navigation'},
+  de: {open:'Menü', close:'Schließen', openAria:'Navigation öffnen', closeAria:'Navigation schließen'},
+  ru: {open:'Меню', close:'Закрыть', openAria:'Открыть навигацию', closeAria:'Закрыть навигацию'}
+}[menuLanguage] || {open:'Menu', close:'Close', openAria:'Open navigation', closeAria:'Close navigation'};
 
 function setMenu(open, returnFocus = false){
   menu.classList.toggle('open', open);
   document.body.classList.toggle('menu-open', open);
   toggle.setAttribute('aria-expanded', open);
-  toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-  toggle.textContent = open ? 'Close' : 'Menu';
+  toggle.setAttribute('aria-label', open ? menuLabels.closeAria : menuLabels.openAria);
+  toggle.textContent = open ? menuLabels.close : menuLabels.open;
   if(open && mobileNavigation.matches){
     menuScrollY = scrollY;
     document.body.style.position = 'fixed';
