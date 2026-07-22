@@ -56,6 +56,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .hero-surname{right:var(--pad);bottom:12%}
 .hero-portrait,.hero-poster{position:absolute;z-index:4;left:50%;bottom:-6%;width:min(49vw,700px);height:94%;object-fit:contain;transform:translateX(-50%);will-change:transform,opacity,filter}
 .hero-poster{display:none}
+.hero-stage.hero-poster-only .hero-portrait{display:none}
+.hero-stage.hero-poster-only .hero-poster{display:block}
 .hero-foot{left:var(--pad);bottom:28px}
 .hero-foot a{display:flex;align-items:center;gap:12px;transition:opacity .3s ease}
 .hero-foot a:hover,.hero-foot a:focus-visible{opacity:.58}
