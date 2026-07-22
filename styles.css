@@ -159,6 +159,9 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
 .js .reveal-media,.js .reveal-content{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--delay,0ms)}
 .js .reveal-media.in-view,.js .reveal-content.in-view{opacity:1;transform:none}
 
+@media(min-width:768px){
+  .hero-reel{display:none}
+}
 @media(max-width:900px){
   .site-header{grid-template-columns:1fr auto;align-items:center;padding-top:max(14px,env(safe-area-inset-top))}
   .header-role{display:none}
