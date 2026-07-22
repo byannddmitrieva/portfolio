@@ -33,7 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#work">К избранным проектам</a>
   <div class="loader" aria-hidden="true">
     <div class="loader-name">Anna Dmitrieva</div>
@@ -64,23 +64,17 @@
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-label="Анна Дмитриева — вступление">
       <div class="hero-stage">
-        <p class="hero-label">Берлин · Работаю по всему миру</p>
-        <h1>
-          <span>Anna</span>
-          <span class="serif">Dmitrieva</span>
-        </h1>
-        <div class="hero-side">
-          <p>Независимый арт-директор и бренд-дизайнер с опытом более 10 лет. Создаю айдентику, кампании и визуальные системы для амбициозных брендов.</p>
-        </div>
-      </div>
-      <div class="hero-reel" aria-hidden="true">
-        <div>Айдентика — Арт-дирекшн — Кампании — Типографика — Диджитал — Печать —</div>
-        <div>Айдентика — Арт-дирекшн — Кампании — Типографика — Диджитал — Печать —</div>
-      </div>
-      <div class="hero-foot">
-        <a href="#work">Смотреть проекты <span class="arrow-icon arrow-down" aria-hidden="true"></span></a>
+        <p class="hero-location">Берлин<br>Германия</p>
+        <p class="hero-role">Бренд-дизайнер<br>Арт-директор</p>
+        <h1><span class="hero-name">ANNA</span><span class="hero-surname">DMITRIEVA</span></h1>
+        <video class="hero-portrait" autoplay loop muted playsinline preload="metadata" poster="../assets/videos/hero/anna-portrait-poster.png" aria-label="Анимированный портрет Анны Дмитриевой">
+          <source media="(max-width: 700px)" src="../assets/videos/hero/anna-portrait-alpha-480.webm" type="video/webm">
+          <source src="../assets/videos/hero/anna-portrait-alpha.webm" type="video/webm">
+        </video>
+        <img class="hero-poster" src="../assets/videos/hero/anna-portrait-poster.png" alt="Портрет Анны Дмитриевой" width="720" height="720">
+        <div class="hero-foot"><a href="#work">Избранные проекты <span class="arrow-icon arrow-down" aria-hidden="true"></span></a></div>
       </div>
     </section>
 

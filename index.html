@@ -33,7 +33,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#work">Skip to selected work</a>
   <div class="loader" aria-hidden="true">
     <div class="loader-name">Anna Dmitrieva</div>
@@ -64,23 +64,17 @@
   </header>
 
   <main id="top">
-    <section class="hero">
+    <section class="hero" aria-label="Anna Dmitrieva introduction">
       <div class="hero-stage">
-        <p class="hero-label">Berlin · Available worldwide</p>
-        <h1>
-          <span>Anna</span>
-          <span class="serif">Dmitrieva</span>
-        </h1>
-        <div class="hero-side">
-          <p>Independent Art Director and Brand Designer with 10+ years of experience, creating identities, campaigns and visual systems for ambitious brands.</p>
-        </div>
-      </div>
-      <div class="hero-reel" aria-hidden="true">
-        <div>Brand Identity — Art Direction — Campaigns — Typography — Digital — Print —</div>
-        <div>Brand Identity — Art Direction — Campaigns — Typography — Digital — Print —</div>
-      </div>
-      <div class="hero-foot">
-        <a href="#work">Scroll to explore <span class="arrow-icon arrow-down" aria-hidden="true"></span></a>
+        <p class="hero-location">Berlin<br>Germany</p>
+        <p class="hero-role">Brand Designer<br>Art Director</p>
+        <h1><span class="hero-name">ANNA</span><span class="hero-surname">DMITRIEVA</span></h1>
+        <video class="hero-portrait" autoplay loop muted playsinline preload="metadata" poster="assets/videos/hero/anna-portrait-poster.png" aria-label="Animated portrait of Anna Dmitrieva">
+          <source media="(max-width: 700px)" src="assets/videos/hero/anna-portrait-alpha-480.webm" type="video/webm">
+          <source src="assets/videos/hero/anna-portrait-alpha.webm" type="video/webm">
+        </video>
+        <img class="hero-poster" src="assets/videos/hero/anna-portrait-poster.png" alt="Portrait of Anna Dmitrieva" width="720" height="720">
+        <div class="hero-foot"><a href="#work">Selected Work <span class="arrow-icon arrow-down" aria-hidden="true"></span></a></div>
       </div>
     </section>
 
