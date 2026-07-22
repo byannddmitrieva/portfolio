@@ -46,11 +46,17 @@ const heroStage = document.querySelector('.hero-stage');
 const heroVideo = document.querySelector('.hero-portrait');
 const heroName = document.querySelector('.hero-name');
 const heroSurname = document.querySelector('.hero-surname');
+const appleWebKitWithoutVp9Alpha = /AppleWebKit/i.test(navigator.userAgent) && !/(Chrome|Chromium|Edg|OPR)\//i.test(navigator.userAgent);
 
 if(heroStage && heroVideo && heroName && heroSurname){
-  if(reducedMotion){
+  if(reducedMotion || appleWebKitWithoutVp9Alpha){
+    heroStage.classList.add('hero-poster-only');
     heroVideo.pause();
     heroVideo.removeAttribute('autoplay');
+    if(appleWebKitWithoutVp9Alpha){
+      heroVideo.querySelectorAll('source').forEach(source => source.removeAttribute('src'));
+      heroVideo.load();
+    }
   }else{
     const startHeroVideo = () => {
       heroVideo.muted = true;
