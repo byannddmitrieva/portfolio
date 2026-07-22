@@ -42,6 +42,61 @@ addEventListener('scroll', updateProgress, {passive:true});
 addEventListener('resize', updateProgress);
 updateProgress();
 
+const heroStage = document.querySelector('.hero-stage');
+const heroVideo = document.querySelector('.hero-portrait');
+const heroName = document.querySelector('.hero-name');
+const heroSurname = document.querySelector('.hero-surname');
+
+if(heroStage && heroVideo && heroName && heroSurname){
+  if(reducedMotion){
+    heroVideo.pause();
+    heroVideo.removeAttribute('autoplay');
+  }else{
+    const startHeroVideo = () => {
+      heroVideo.muted = true;
+      heroVideo.defaultMuted = true;
+      heroVideo.playsInline = true;
+      heroVideo.play().catch(() => {});
+    };
+
+    startHeroVideo();
+    heroVideo.addEventListener('canplay', startHeroVideo, {once:true});
+    addEventListener('pageshow', startHeroVideo);
+    document.addEventListener('visibilitychange', () => {
+      if(document.hidden) heroVideo.pause();
+      else startHeroVideo();
+    });
+
+    let heroTicking = false;
+    const updateHero = () => {
+      const progress = Math.min(1, scrollY / (innerHeight * .42));
+      if(progress > 0){
+        heroVideo.style.animation = 'none';
+        heroVideo.style.opacity = '1';
+        heroVideo.style.filter = 'none';
+        heroName.style.animation = 'none';
+        heroName.style.opacity = '1';
+        heroSurname.style.animation = 'none';
+        heroSurname.style.opacity = '1';
+      }
+      heroVideo.style.transform = `translateX(-50%) translateY(${-progress * 34}px) scale(${1 + progress * .035})`;
+      heroName.style.transform = `translateX(${-progress * 2.2}vw)`;
+      heroSurname.style.transform = `translateX(${progress * 2.2}vw)`;
+      heroStage.style.opacity = String(1 - progress * .16);
+      heroTicking = false;
+    };
+
+    addEventListener('scroll', () => {
+      if(!heroTicking){
+        requestAnimationFrame(updateHero);
+        heroTicking = true;
+      }
+    }, {passive:true});
+    addEventListener('resize', updateHero);
+    updateHero();
+  }
+}
+
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){
