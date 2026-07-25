@@ -144,6 +144,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .contact-links{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:70px;font-size:clamp(28px,4vw,62px);font-style:normal;letter-spacing:-.04em}
 .contact-links a{max-width:100%;overflow-wrap:anywhere;border-bottom:1px solid transparent;transition:opacity .3s ease,border-color .3s ease}
 .contact-links a:hover,.contact-links a:focus-visible{opacity:.62;border-color:currentColor}
+.email-label-mobile,.email-arrow-mobile{display:none}
 footer{padding:24px var(--pad);display:flex;justify-content:space-between;border-top:1px solid var(--line)}
 footer .footer-meta{display:flex;align-items:center;gap:50px}
 .legal-links{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px}
@@ -212,9 +213,9 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
 }
 @media(max-width:700px){
   .hero-stage{min-height:560px}
-  .hero h1{font-size:22vw}
+  .hero h1{font-size:18vw}
   .hero-name{left:12px;top:25%}
-  .hero-surname{right:12px;bottom:31%;font-size:18vw}
+  .hero-surname{right:12px;bottom:31%}
   .hero-portrait,.hero-poster{width:96vw;height:78%;bottom:10%}
   .hero-location{left:16px;top:auto;bottom:96px}
   .hero-role{right:16px;top:auto;bottom:96px}
@@ -245,6 +246,9 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   .about h2{font-size:16vw}
   .contact-links{gap:18px 24px;margin-top:48px;font-size:clamp(23px,8vw,38px)}
   .contact-links a{min-height:44px}
+  .email-label-desktop{display:none}
+  .email-label-mobile{display:inline}
+  .email-arrow-mobile{display:inline-block}
   footer{align-items:flex-end;gap:18px;font-size:12px}
   footer .footer-meta{flex-wrap:wrap;gap:8px 18px}
   .footer-location{display:none}
