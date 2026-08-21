@@ -282,3 +282,27 @@ document.querySelectorAll('.case-video').forEach(video => {
 
   observer.observe(video);
 });
+
+document.querySelectorAll('.sound-video-frame').forEach(frame => {
+  const video = frame.querySelector('video');
+  const toggleSound = frame.querySelector('.video-sound-toggle');
+
+  const updateSoundLabel = () => {
+    const label = video.muted ? toggleSound.dataset.labelMuted : toggleSound.dataset.labelAudible;
+    toggleSound.textContent = label;
+    toggleSound.setAttribute('aria-label', label);
+    toggleSound.setAttribute('aria-pressed', String(!video.muted));
+  };
+
+  toggleSound.addEventListener('click', () => {
+    if(!video.src){
+      video.src = video.dataset.src;
+      video.load();
+    }
+    video.muted = !video.muted;
+    video.play().catch(() => {});
+    updateSoundLabel();
+  });
+
+  updateSoundLabel();
+});
