@@ -1,6 +1,6 @@
 
 :root{
-  --paper:#f2f2f2;
+  --paper:#f1f2f3;
   --ink:#11110f;
   --muted:#716f68;
   --line:rgba(17,17,15,.22);
@@ -77,7 +77,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .section-head{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:12px}
 .section-head h2{font-size:clamp(42px,7vw,112px);font-weight:400;letter-spacing:-.06em;margin:0}
 .section-head p{display:none}
-.project-row{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:18px;padding:25px 0;border-bottom:1px solid var(--line);transition:padding .45s var(--ease)}
+.project-row{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:18px;padding:25px 0;transition:padding .45s var(--ease)}
 .project-row:before{content:"";position:absolute;inset:0;background:var(--accent);transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease);z-index:-1}
 .project-row:hover,.project-row:focus-visible{padding-left:18px;padding-right:18px;outline-offset:2px}
 .project-row:hover:before,.project-row:focus-visible:before{transform:scaleY(1)}
@@ -122,6 +122,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .motion-button:hover,.motion-button:focus-visible{opacity:.58}
 .case-video-frame{position:relative;left:50%;grid-column:1/-1;width:100vw;margin:0;overflow:hidden;background:var(--paper);transform:translateX(-50vw)}
 .case-video{display:block;width:100%;height:auto;max-height:100vh;object-fit:contain}
+.video-sound-toggle{position:absolute;z-index:2;right:max(16px,var(--pad));bottom:16px;min-height:44px;padding:0 15px;border:1px solid rgba(255,255,255,.45);border-radius:0;background:rgba(17,17,15,.78);color:#fff;font-size:11px;letter-spacing:.06em;text-transform:uppercase;transition:background-color .25s ease,color .25s ease}
+.video-sound-toggle:hover,.video-sound-toggle:focus-visible{background:#fff;color:var(--ink)}
 .next-project{margin-top:16vh;padding:20px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr minmax(0,auto);align-items:end;gap:18px;position:relative;isolation:isolate;overflow:hidden;transition:padding .5s var(--ease)}
 .next-project:before{content:"";position:absolute;inset:0;background:var(--next);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease);z-index:-1}
 .next-project:hover,.next-project:focus-visible{padding-left:18px;padding-right:18px;outline-offset:2px}
@@ -223,7 +225,7 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   .case{padding-top:11vh;padding-bottom:15vh}
   .case-intro{grid-template-columns:1fr;gap:10px}
   .case-title-wrap,.case-description{min-width:0}
-  .case-title-wrap h2{font-size:clamp(54px,19vw,92px);overflow-wrap:anywhere}
+  .case-title-wrap h2{font-size:clamp(54px,19vw,92px);line-height:.84;overflow-wrap:anywhere}
   .case-description{font-size:19px;line-height:1.35}
   .case-gallery{gap:12px}
   .media img{aspect-ratio:16/9;object-fit:cover}
@@ -231,11 +233,12 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   .motion-controls{padding-top:8px}
   .motion-navigation{gap:4px}
   .next-project{margin-top:11vh;min-height:84px}
-  .next-project strong{font-size:clamp(44px,14vw,72px);overflow-wrap:anywhere}
+  .next-project strong{font-size:clamp(44px,14vw,72px);line-height:.9;overflow-wrap:anywhere}
   .about{padding-top:12vh;padding-bottom:12vh}
-  .about-columns{grid-template-columns:1fr}
-  .about h2{font-size:16vw}
-  .contact-links{gap:18px 24px;margin-top:48px;font-size:clamp(23px,8vw,38px)}
+  .about h2{margin-bottom:40px;font-size:16vw;line-height:.96}
+  .about-columns{grid-template-columns:1fr;gap:16px;margin-top:34px}
+  .about-columns p{margin:0}
+  .contact-links{gap:18px 24px;margin-top:36px;font-size:clamp(23px,8vw,38px)}
   .contact-links a{min-height:44px}
   .email-label-desktop{display:none}
   .email-label-mobile{display:inline}
@@ -246,7 +249,7 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   .legal-page .site-header{padding-right:var(--pad)}
   .legal-main{padding-top:120px;padding-bottom:11vh}
   .legal-hero{grid-template-columns:1fr;gap:8px;padding-bottom:22px}
-  .legal-hero h1{grid-column:1;font-size:clamp(58px,18vw,88px)}
+  .legal-hero h1{grid-column:1;font-size:clamp(58px,18vw,88px);line-height:.88}
   .legal-content{margin:52px 0 0}
   .legal-section+.legal-section{margin-top:44px}
   .legal-content h2{font-size:28px}
