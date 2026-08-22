@@ -124,7 +124,7 @@ if(matchMedia('(pointer:fine)').matches){
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY + 'px';
   });
-  document.querySelectorAll('.project-row, .next-project, .media').forEach(el => {
+  document.querySelectorAll('.next-project, .media').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('visible'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
   });
