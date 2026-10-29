@@ -108,6 +108,9 @@ button{font:inherit;color:inherit;cursor:pointer}
 .media.portrait-left{grid-column:1/6}
 .media.portrait-right{grid-column:8/-1}
 .project-page .case-gallery .media{grid-column:1/-1}
+.figma-case-gallery{gap:0;background:#131212}
+.figma-case-gallery .media{background:#131212}
+.figma-case-gallery .media img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transform:none!important;transition:none}
 .motion-slider{margin-top:var(--pad)}
 .motion-viewport{position:relative;aspect-ratio:2/1;overflow:hidden;background:#111}
 .motion-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;visibility:hidden;transition:opacity .65s ease,visibility 0s linear .65s}
@@ -224,6 +227,7 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   .case-description{font-size:19px;line-height:1.35}
   .case-gallery{gap:12px}
   .media img{aspect-ratio:16/9;object-fit:cover}
+  .figma-case-gallery .media img{aspect-ratio:auto;object-fit:contain}
   .motion-slider{margin-top:12px}
   .motion-controls{padding-top:8px}
   .motion-navigation{gap:4px}
