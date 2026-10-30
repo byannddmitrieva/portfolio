@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261030-2">
 </head>
 <body class="home-page">
   <a class="skip-link" href="#work">Skip to selected work</a>
@@ -76,80 +76,84 @@
           <source src="assets/videos/hero/anna-head-alpha.webm" type="video/webm">
         </video>
         <img class="hero-poster" src="assets/videos/hero/anna-head-poster.png" alt="Portrait of Anna Dmitrieva" width="720" height="720">
-        <div class="hero-foot"><a href="#work">Selected Work <span class="arrow-icon arrow-down" aria-hidden="true"></span></a></div>
+        <div class="hero-foot work-filters" role="group" aria-label="Filter projects">
+          <button class="work-filter is-active" type="button" data-filter="all" aria-pressed="true">All projects</button>
+          <button class="work-filter" type="button" data-filter="branding" aria-pressed="false">Branding</button>
+          <button class="work-filter" type="button" data-filter="websites" aria-pressed="false">Websites</button>
+          <button class="work-filter" type="button" data-filter="presentations" aria-pressed="false">Presentations</button>
+          <span class="work-filter-status" aria-live="polite"></span>
+        </div>
       </div>
     </section>
 
     <section class="selected" id="work">
       <header class="section-head">
-        <h2>Selected work</h2>
-        <p>2018—2026</p>
+        <h2 class="work-title">All projects</h2>
       </header>
       <div class="project-list">
-        
-      <a class="project-row" href="projects/samolet.html" data-project="samolet" style="--accent:#0b7cff">
+      <a class="project-row" href="projects/try1.html" data-project="try1" data-categories="branding websites" style="--accent:#034dc3">
         <span class="project-no">01</span>
-        <span class="project-name">Samolet Group</span>
-        <span class="project-role">Art Direction · Rebranding · 360° Campaigns</span>
-        <span class="project-year">2023—25</span>
+        <span class="project-name">TRY1</span>
+        <span class="project-role">Creative Direction · Brand Strategy · Brand Identity</span>
+        <span class="project-year">2026</span>
         <span class="project-arrow" aria-hidden="true"></span>
-        <span class="project-preview"><img src="assets/images/samolet-06.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
+        <span class="project-preview"><img src="assets/projects/try1/try1-01.webp" alt="" loading="lazy" decoding="async" width="1800" height="1013"></span>
       </a>
-      <a class="project-row" href="projects/nova.html" data-project="nova" style="--accent:#191919">
+      <a class="project-row" href="projects/noble.html" data-project="noble" data-categories="branding websites" style="--accent:#6a5042">
         <span class="project-no">02</span>
-        <span class="project-name">NOVA</span>
-        <span class="project-role">Brand Identity · Art Direction · Communication</span>
-        <span class="project-year">2023</span>
-        <span class="project-arrow" aria-hidden="true"></span>
-        <span class="project-preview"><img src="assets/images/nova-20.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
-      </a>
-      <a class="project-row" href="projects/port-emm.html" data-project="port-emm" style="--accent:#f06a24">
-        <span class="project-no">03</span>
-        <span class="project-name">Port Emm Zavidovo</span>
-        <span class="project-role">Brand System · Art Direction · Property Marketing</span>
-        <span class="project-year">2024</span>
-        <span class="project-arrow" aria-hidden="true"></span>
-        <span class="project-preview"><img src="assets/images/port-emm-30.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
-      </a>
-      <a class="project-row" href="projects/noble.html" data-project="noble" style="--accent:#6a5042">
-        <span class="project-no">04</span>
         <span class="project-name">Noble</span>
         <span class="project-role">Branding · Digital · Premium Real Estate</span>
         <span class="project-year">2024</span>
         <span class="project-arrow" aria-hidden="true"></span>
         <span class="project-preview"><img src="assets/images/noble-39.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
       </a>
-      <a class="project-row" href="projects/pervert.html" data-project="pervert" style="--accent:#e74395">
-        <span class="project-no">05</span>
+      <a class="project-row" href="projects/pervert.html" data-project="pervert" data-categories="branding websites" style="--accent:#e74395">
+        <span class="project-no">03</span>
         <span class="project-name">PERVERT</span>
         <span class="project-role">Brand Identity · Packaging · Art Direction</span>
         <span class="project-year">2022</span>
         <span class="project-arrow" aria-hidden="true"></span>
         <span class="project-preview"><img src="assets/images/pervert-49.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
       </a>
-      <a class="project-row" href="projects/tripleten.html" data-project="tripleten" style="--accent:#7057ff">
-        <span class="project-no">06</span>
-        <span class="project-name">TripleTen</span>
-        <span class="project-role">Brand Design · Campaigns · EdTech</span>
+      <a class="project-row" href="projects/samolet.html" data-project="samolet" data-categories="branding" style="--accent:#0b7cff">
+        <span class="project-no">04</span>
+        <span class="project-name">Samolet Group</span>
+        <span class="project-role">Art Direction · Rebranding · 360° Campaigns</span>
         <span class="project-year">2023—25</span>
         <span class="project-arrow" aria-hidden="true"></span>
-        <span class="project-preview"><img src="assets/images/tripleten-57.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
+        <span class="project-preview"><img src="assets/images/samolet-06.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
       </a>
-      <a class="project-row" href="projects/beauty-value.html" data-project="beauty-value" style="--accent:#8ca4b6">
+      <a class="project-row" href="projects/port-emm.html" data-project="port-emm" data-categories="branding" style="--accent:#f06a24">
+        <span class="project-no">05</span>
+        <span class="project-name">Port Emm Zavidovo</span>
+        <span class="project-role">Brand System · Art Direction · Property Marketing</span>
+        <span class="project-year">2024</span>
+        <span class="project-arrow" aria-hidden="true"></span>
+        <span class="project-preview"><img src="assets/images/port-emm-30.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
+      </a>
+      <a class="project-row" href="projects/nova.html" data-project="nova" data-categories="branding" style="--accent:#191919">
+        <span class="project-no">06</span>
+        <span class="project-name">NOVA</span>
+        <span class="project-role">Brand Identity · Art Direction · Communication</span>
+        <span class="project-year">2023</span>
+        <span class="project-arrow" aria-hidden="true"></span>
+        <span class="project-preview"><img src="assets/images/nova-20.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
+      </a>
+      <a class="project-row" href="projects/beauty-value.html" data-project="beauty-value" data-categories="presentations" style="--accent:#8ca4b6">
         <span class="project-no">07</span>
-        <span class="project-name">Beauty &amp; Value</span>
+        <span class="project-name">Khamovniki</span>
         <span class="project-role">Presentation Design · Art Direction</span>
         <span class="project-year">2026</span>
         <span class="project-arrow" aria-hidden="true"></span>
         <span class="project-preview"><img src="assets/projects/beauty-value/beauty-value-cover.webp" alt="" loading="lazy" decoding="async" width="1920" height="1080"></span>
       </a>
-      <a class="project-row" href="projects/try1.html" data-project="try1" style="--accent:#034dc3">
+      <a class="project-row" href="projects/tripleten.html" data-project="tripleten" data-categories="branding" style="--accent:#7057ff">
         <span class="project-no">08</span>
-        <span class="project-name">TRY1</span>
-        <span class="project-role">Creative Direction · Brand Strategy · Brand Identity</span>
-        <span class="project-year">2026</span>
+        <span class="project-name">TripleTen</span>
+        <span class="project-role">Brand Design · Campaigns · EdTech</span>
+        <span class="project-year">2023—25</span>
         <span class="project-arrow" aria-hidden="true"></span>
-        <span class="project-preview"><img src="assets/projects/try1/try1-01.webp" alt="" loading="lazy" decoding="async" width="1800" height="1013"></span>
+        <span class="project-preview"><img src="assets/images/tripleten-57.jpg" alt="" loading="lazy" decoding="async" width="1600" height="900"></span>
       </a>
       <!-- Temporarily hidden: Moscow Lyceums -->
       <template data-hidden-project="moscow-lyceums">
@@ -228,6 +232,6 @@
     <a href="#top">Back to top <span class="arrow-icon arrow-up" aria-hidden="true"></span></a>
   </footer>
 
-  <script src="script.js?v=20260822-1" defer></script>
+  <script src="script.js?v=20261030-2" defer></script>
 </body>
 </html>

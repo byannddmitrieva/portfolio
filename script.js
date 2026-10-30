@@ -118,6 +118,43 @@ document.querySelectorAll('.case-gallery').forEach(gallery => {
 });
 document.querySelectorAll('.reveal-media, .reveal-content').forEach(el => io.observe(el));
 
+document.querySelectorAll('.work-filters').forEach(filterGroup => {
+  const filters = [...filterGroup.querySelectorAll('.work-filter')];
+  const projects = [...document.querySelectorAll('.project-list > .project-row')];
+  const status = filterGroup.querySelector('.work-filter-status');
+  const title = document.querySelector('.work-title');
+
+  if(!filters.length || !projects.length) return;
+
+  const applyProjectFilter = filter => {
+    let visibleCount = 0;
+
+    projects.forEach(project => {
+      const categories = (project.dataset.categories || '').split(' ');
+      const visible = filter === 'all' || categories.includes(filter);
+      project.hidden = !visible;
+      if(visible) visibleCount += 1;
+    });
+
+    filters.forEach(button => {
+      const active = button.dataset.filter === filter;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+
+    const activeFilter = filters.find(button => button.dataset.filter === filter);
+    if(title && activeFilter) title.textContent = activeFilter.textContent;
+    if(status && activeFilter) status.textContent = `${activeFilter.textContent}: ${visibleCount}`;
+  };
+
+  filters.forEach(button => {
+    button.addEventListener('click', () => {
+      applyProjectFilter(button.dataset.filter);
+      document.querySelector('#work')?.scrollIntoView({behavior:reducedMotion ? 'auto' : 'smooth'});
+    });
+  });
+});
+
 const cursor = document.querySelector('.cursor');
 if(matchMedia('(pointer:fine)').matches){
   addEventListener('mousemove', e => {
