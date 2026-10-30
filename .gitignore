@@ -1,0 +1,3 @@
+# Local source exports retained outside the published site.
+assets/projects/beauty-value/*.png
+assets/projects/try1/source/
