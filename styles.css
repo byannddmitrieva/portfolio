@@ -119,42 +119,42 @@ button{font:inherit;color:inherit;cursor:pointer}
 .figma-case-gallery .media{background:#131212}
 .figma-case-gallery .media img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transform:none!important;transition:none}
 /* Port Emm: editorial sequence approved in Figma. */
-:is(#port-emm,#nova){padding-top:88px;padding-bottom:72px}
-:is(#port-emm,#nova) .case-intro{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-bottom:28px;padding-bottom:52px}
-:is(#port-emm,#nova) .case-title-wrap h1{margin:0;font-size:clamp(74px,8.89vw,128px);letter-spacing:-.07em}
-:is(#port-emm,#nova) .case-description{font-size:clamp(20px,2.223vw,32px);letter-spacing:-.03em}
-:is(#port-emm,#nova) .case-description p{margin:0 0 26px}
-:is(#port-emm,#nova) .case-description .case-role{margin-bottom:0;font-size:12px;letter-spacing:0}
-:is(#port-emm,#nova) .case-gallery{gap:28px}
+:is(#port-emm,#nova,#acteave){padding-top:88px;padding-bottom:72px}
+:is(#port-emm,#nova,#acteave) .case-intro{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-bottom:28px;padding-bottom:52px}
+:is(#port-emm,#nova,#acteave) .case-title-wrap h1{margin:0;font-size:clamp(74px,8.89vw,128px);letter-spacing:-.07em}
+:is(#port-emm,#nova,#acteave) .case-description{font-size:clamp(20px,2.223vw,32px);letter-spacing:-.03em}
+:is(#port-emm,#nova,#acteave) .case-description p{margin:0 0 26px}
+:is(#port-emm,#nova,#acteave) .case-description .case-role{margin-bottom:0;font-size:12px;letter-spacing:0}
+:is(#port-emm,#nova,#acteave) .case-gallery{gap:28px}
 #port-emm .media.pair-left{grid-column:1/7}
 #port-emm .media.pair-right{grid-column:7/-1}
 #port-emm .media{background:transparent}
 #port-emm .media img{height:auto;aspect-ratio:16/9;object-fit:contain;transform:none!important;transition:none}
-:is(#port-emm,#nova) .case-story,:is(#port-emm,#nova) .case-credits{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
-:is(#port-emm,#nova) .case-story{padding:52px 0 24px}
-:is(#port-emm,#nova) .case-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
-:is(#port-emm,#nova) .case-story p{margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
+:is(#port-emm,#nova,#acteave) .case-story,:is(#port-emm,#nova,#acteave) .case-credits{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
+:is(#port-emm,#nova,#acteave) .case-story{padding:52px 0 24px}
+:is(#port-emm,#nova,#acteave) .case-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
+:is(#port-emm,#nova,#acteave) .case-story p{margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
 #port-emm .case-video-frame{left:auto;width:100%;transform:none}
 #port-emm .case-video{aspect-ratio:40/27;max-height:none}
 #port-emm .case-caption{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.2}
-:is(#port-emm,#nova) .case-credits{padding-top:40px;font-size:17px;line-height:1.2}
-:is(#port-emm,#nova) .case-credits p{margin:0}
-:is(#port-emm,#nova) .case-credits p+p{color:var(--muted)}
-:is(#port-emm,#nova) .case-credits a{text-decoration:underline;text-underline-offset:3px}
+:is(#port-emm,#nova,#acteave) .case-credits{padding-top:40px;font-size:17px;line-height:1.2}
+:is(#port-emm,#nova,#acteave) .case-credits p{margin:0}
+:is(#port-emm,#nova,#acteave) .case-credits p+p{color:var(--muted)}
+:is(#port-emm,#nova,#acteave) .case-credits a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:900px){
-  :is(#port-emm,#nova){padding-top:96px;padding-bottom:40px}
-  :is(#port-emm,#nova) .case-intro,:is(#port-emm,#nova) .case-story,:is(#port-emm,#nova) .case-credits{grid-template-columns:1fr;gap:16px}
-  :is(#port-emm,#nova) .case-intro{gap:28px;margin-bottom:16px;padding-bottom:20px}
-  :is(#port-emm,#nova) .case-title-wrap h1{font-size:clamp(64px,19vw,100px)}
-  :is(#port-emm,#nova) .case-description{font-size:19px;line-height:1.2}
-  :is(#port-emm,#nova) .case-description .case-role{font-size:10px}
-  :is(#port-emm,#nova) .case-gallery{gap:16px}
+  :is(#port-emm,#nova,#acteave){padding-top:96px;padding-bottom:40px}
+  :is(#port-emm,#nova,#acteave) .case-intro,:is(#port-emm,#nova,#acteave) .case-story,:is(#port-emm,#nova,#acteave) .case-credits{grid-template-columns:1fr;gap:16px}
+  :is(#port-emm,#nova,#acteave) .case-intro{gap:28px;margin-bottom:16px;padding-bottom:20px}
+  :is(#port-emm,#nova,#acteave) .case-title-wrap h1{font-size:clamp(64px,19vw,100px)}
+  :is(#port-emm,#nova,#acteave) .case-description{font-size:19px;line-height:1.2}
+  :is(#port-emm,#nova,#acteave) .case-description .case-role{font-size:10px}
+  :is(#port-emm,#nova,#acteave) .case-gallery{gap:16px}
   #port-emm .media.pair-left,#port-emm .media.pair-right{grid-column:1/-1}
-  :is(#port-emm,#nova) .case-story{padding:32px 0 8px}
-  :is(#port-emm,#nova) .case-story h2{font-size:30px}
-  :is(#port-emm,#nova) .case-story p{font-size:19px;line-height:1.2}
+  :is(#port-emm,#nova,#acteave) .case-story{padding:32px 0 8px}
+  :is(#port-emm,#nova,#acteave) .case-story h2{font-size:30px}
+  :is(#port-emm,#nova,#acteave) .case-story p{font-size:19px;line-height:1.2}
   #port-emm .case-caption{font-size:9px}
-  :is(#port-emm,#nova) .case-credits{padding-top:24px;font-size:13px}
+  :is(#port-emm,#nova,#acteave) .case-credits{padding-top:24px;font-size:13px}
 }
 .motion-slider{margin-top:var(--pad)}
 .motion-viewport{position:relative;aspect-ratio:2/1;overflow:hidden;background:#111}
@@ -330,3 +330,24 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   #nova .case-credits{min-height:107px}
   #nova .nova-mobile-only{display:block}
 }
+
+/* ACTEAVE: approved Figma frames 2256:2972 and 2256:3027. */
+.acteave-page{--pad:36px}
+#acteave .case-title-wrap h1{font-size:clamp(64px,7.36112vw,106px);letter-spacing:-.065em}
+#acteave .case-story p{color:var(--muted);line-height:1.2}
+#acteave .acteave-art{grid-column:1/-1;margin:0;min-width:0}
+#acteave .acteave-art a{display:block;cursor:zoom-in}
+#acteave .acteave-art img{width:100%;height:auto;object-fit:contain}
+#acteave .acteave-logo{grid-column:1/-1;display:flex;align-items:center;justify-content:center;margin:0;min-width:0;height:340px;background:#e4e4e4}
+#acteave .acteave-logo img{width:640px;max-width:calc(100% - 72px);height:auto;object-fit:contain}
+@media(max-width:900px){
+  .acteave-page{--pad:18px}
+  #acteave{padding-top:96px}
+  #acteave .case-title-wrap h1{font-size:clamp(48px,14.102565vw,100px)}
+  #acteave .case-description p{margin-bottom:16px}
+  #acteave .case-description .case-role{margin-bottom:0}
+  #acteave .acteave-logo{height:180px}
+  #acteave .acteave-logo img{width:270px}
+}
+.project-row[data-project="acteave"] .project-preview{background:#e4e4e4}
+.project-row[data-project="acteave"] .project-preview img{object-fit:contain;transform:none}
