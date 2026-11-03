@@ -358,7 +358,7 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
 #noble .noble-art{grid-column:1/-1;margin:0;min-width:0}
 #noble .noble-art img{display:block;width:100%;height:auto;object-fit:contain}
 #noble .noble-pair{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;min-width:0}
-#noble .noble-pair--architecture{grid-template-columns:minmax(0,1308fr) minmax(0,1381fr)}
+#noble .noble-pair--architecture{grid-template-columns:minmax(0,1307fr) minmax(0,1380fr)}
 #noble .noble-pair .noble-art{grid-column:auto}
 #noble .noble-social-desktop{grid-column:1/-1;min-width:0}
 #noble .noble-social-mobile{display:none}
