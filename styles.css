@@ -133,7 +133,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 :is(#port-emm,#nova,#acteave,#noble) .case-story,:is(#port-emm,#nova,#acteave,#noble) .case-credits{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
 :is(#port-emm,#nova,#acteave,#noble) .case-story{padding:52px 0 24px}
 :is(#port-emm,#nova,#acteave,#noble) .case-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
-:is(#port-emm,#nova,#acteave,#noble) .case-story p{margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
+:is(#port-emm,#nova,#acteave,#noble) .case-story p{align-self:center;margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
 #port-emm .case-video-frame{left:auto;width:100%;transform:none}
 #port-emm .case-video{aspect-ratio:40/27;max-height:none}
 #port-emm .case-caption{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.2}
