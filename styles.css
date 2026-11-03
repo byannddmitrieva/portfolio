@@ -119,42 +119,42 @@ button{font:inherit;color:inherit;cursor:pointer}
 .figma-case-gallery .media{background:#131212}
 .figma-case-gallery .media img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transform:none!important;transition:none}
 /* Port Emm: editorial sequence approved in Figma. */
-:is(#port-emm,#nova,#acteave){padding-top:88px;padding-bottom:72px}
-:is(#port-emm,#nova,#acteave) .case-intro{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-bottom:28px;padding-bottom:52px}
-:is(#port-emm,#nova,#acteave) .case-title-wrap h1{margin:0;font-size:clamp(74px,8.89vw,128px);letter-spacing:-.07em}
-:is(#port-emm,#nova,#acteave) .case-description{font-size:clamp(20px,2.223vw,32px);letter-spacing:-.03em}
-:is(#port-emm,#nova,#acteave) .case-description p{margin:0 0 26px}
-:is(#port-emm,#nova,#acteave) .case-description .case-role{margin-bottom:0;font-size:12px;letter-spacing:0}
-:is(#port-emm,#nova,#acteave) .case-gallery{gap:28px}
+:is(#port-emm,#nova,#acteave,#noble){padding-top:88px;padding-bottom:72px}
+:is(#port-emm,#nova,#acteave,#noble) .case-intro{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-bottom:28px;padding-bottom:52px}
+:is(#port-emm,#nova,#acteave,#noble) .case-title-wrap h1{margin:0;font-size:clamp(74px,8.89vw,128px);letter-spacing:-.07em}
+:is(#port-emm,#nova,#acteave,#noble) .case-description{font-size:clamp(20px,2.223vw,32px);letter-spacing:-.03em}
+:is(#port-emm,#nova,#acteave,#noble) .case-description p{margin:0 0 26px}
+:is(#port-emm,#nova,#acteave,#noble) .case-description .case-role{margin-bottom:0;font-size:12px;letter-spacing:0}
+:is(#port-emm,#nova,#acteave,#noble) .case-gallery{gap:28px}
 #port-emm .media.pair-left{grid-column:1/7}
 #port-emm .media.pair-right{grid-column:7/-1}
 #port-emm .media{background:transparent}
 #port-emm .media img{height:auto;aspect-ratio:16/9;object-fit:contain;transform:none!important;transition:none}
-:is(#port-emm,#nova,#acteave) .case-story,:is(#port-emm,#nova,#acteave) .case-credits{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
-:is(#port-emm,#nova,#acteave) .case-story{padding:52px 0 24px}
-:is(#port-emm,#nova,#acteave) .case-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
-:is(#port-emm,#nova,#acteave) .case-story p{margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
+:is(#port-emm,#nova,#acteave,#noble) .case-story,:is(#port-emm,#nova,#acteave,#noble) .case-credits{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
+:is(#port-emm,#nova,#acteave,#noble) .case-story{padding:52px 0 24px}
+:is(#port-emm,#nova,#acteave,#noble) .case-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
+:is(#port-emm,#nova,#acteave,#noble) .case-story p{margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
 #port-emm .case-video-frame{left:auto;width:100%;transform:none}
 #port-emm .case-video{aspect-ratio:40/27;max-height:none}
 #port-emm .case-caption{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.2}
-:is(#port-emm,#nova,#acteave) .case-credits{padding-top:40px;font-size:17px;line-height:1.2}
-:is(#port-emm,#nova,#acteave) .case-credits p{margin:0}
-:is(#port-emm,#nova,#acteave) .case-credits p+p{color:var(--muted)}
-:is(#port-emm,#nova,#acteave) .case-credits a{text-decoration:underline;text-underline-offset:3px}
+:is(#port-emm,#nova,#acteave,#noble) .case-credits{padding-top:40px;font-size:17px;line-height:1.2}
+:is(#port-emm,#nova,#acteave,#noble) .case-credits p{margin:0}
+:is(#port-emm,#nova,#acteave,#noble) .case-credits p+p{color:var(--muted)}
+:is(#port-emm,#nova,#acteave,#noble) .case-credits a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:900px){
-  :is(#port-emm,#nova,#acteave){padding-top:96px;padding-bottom:40px}
-  :is(#port-emm,#nova,#acteave) .case-intro,:is(#port-emm,#nova,#acteave) .case-story,:is(#port-emm,#nova,#acteave) .case-credits{grid-template-columns:1fr;gap:16px}
-  :is(#port-emm,#nova,#acteave) .case-intro{gap:28px;margin-bottom:16px;padding-bottom:20px}
-  :is(#port-emm,#nova,#acteave) .case-title-wrap h1{font-size:clamp(64px,19vw,100px)}
-  :is(#port-emm,#nova,#acteave) .case-description{font-size:19px;line-height:1.2}
-  :is(#port-emm,#nova,#acteave) .case-description .case-role{font-size:10px}
-  :is(#port-emm,#nova,#acteave) .case-gallery{gap:16px}
+  :is(#port-emm,#nova,#acteave,#noble){padding-top:96px;padding-bottom:40px}
+  :is(#port-emm,#nova,#acteave,#noble) .case-intro,:is(#port-emm,#nova,#acteave,#noble) .case-story,:is(#port-emm,#nova,#acteave,#noble) .case-credits{grid-template-columns:1fr;gap:16px}
+  :is(#port-emm,#nova,#acteave,#noble) .case-intro{gap:28px;margin-bottom:16px;padding-bottom:20px}
+  :is(#port-emm,#nova,#acteave,#noble) .case-title-wrap h1{font-size:clamp(64px,19vw,100px)}
+  :is(#port-emm,#nova,#acteave,#noble) .case-description{font-size:19px;line-height:1.2}
+  :is(#port-emm,#nova,#acteave,#noble) .case-description .case-role{font-size:10px}
+  :is(#port-emm,#nova,#acteave,#noble) .case-gallery{gap:16px}
   #port-emm .media.pair-left,#port-emm .media.pair-right{grid-column:1/-1}
-  :is(#port-emm,#nova,#acteave) .case-story{padding:32px 0 8px}
-  :is(#port-emm,#nova,#acteave) .case-story h2{font-size:30px}
-  :is(#port-emm,#nova,#acteave) .case-story p{font-size:19px;line-height:1.2}
+  :is(#port-emm,#nova,#acteave,#noble) .case-story{padding:32px 0 8px}
+  :is(#port-emm,#nova,#acteave,#noble) .case-story h2{font-size:30px}
+  :is(#port-emm,#nova,#acteave,#noble) .case-story p{font-size:19px;line-height:1.2}
   #port-emm .case-caption{font-size:9px}
-  :is(#port-emm,#nova,#acteave) .case-credits{padding-top:24px;font-size:13px}
+  :is(#port-emm,#nova,#acteave,#noble) .case-credits{padding-top:24px;font-size:13px}
 }
 .motion-slider{margin-top:var(--pad)}
 .motion-viewport{position:relative;aspect-ratio:2/1;overflow:hidden;background:#111}
@@ -351,3 +351,34 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
 }
 .project-row[data-project="acteave"] .project-preview{background:#e4e4e4}
 .project-row[data-project="acteave"] .project-preview img{object-fit:contain;transform:none}
+
+/* Noble: approved Figma case; complete artwork and a 9.8-second website highlight. */
+.noble-page{--paper:#262020;--ink:#f1f0eb;--muted:#beb4ac;--line:rgba(241,240,235,.22);--pad:36px}
+#noble .case-story p{line-height:1.2}
+#noble .noble-art{grid-column:1/-1;margin:0;min-width:0}
+#noble .noble-art img{display:block;width:100%;height:auto;object-fit:contain}
+#noble .noble-pair{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;min-width:0}
+#noble .noble-pair--architecture{grid-template-columns:minmax(0,1308fr) minmax(0,1381fr)}
+#noble .noble-pair .noble-art{grid-column:auto}
+#noble .noble-social-desktop{grid-column:1/-1;min-width:0}
+#noble .noble-social-mobile{display:none}
+#noble .case-video-frame{left:auto;width:100%;transform:none}
+#noble .case-video{aspect-ratio:16/9;max-height:none}
+#noble .case-caption{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.2}
+#noble .case-link{grid-column:1/-1;justify-self:start;color:var(--muted)}
+#noble .next-project:hover,#noble .next-project:focus-visible{color:var(--paper)}
+@media(max-width:900px){
+  .noble-page{--pad:18px}
+  #noble{padding-top:48px}
+  #noble .case-title-wrap h1{font-size:clamp(64px,18.97436vw,100px)}
+  #noble .case-description{font-size:24px;line-height:1.1}
+  #noble .case-description p{margin-bottom:18px}
+  #noble .case-description .case-role{margin-bottom:0}
+  #noble .noble-pair{grid-template-columns:minmax(0,1fr);gap:16px}
+  #noble .noble-social-desktop{display:none}
+  #noble .noble-social-mobile{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;min-width:0}
+  #noble .noble-social-mobile .noble-art{grid-column:auto}
+  #noble .noble-social-mobile .noble-art:first-child{grid-column:1/-1}
+  #noble .case-caption{font-size:10px}
+  #noble .case-credits{font-size:14px}
+}
