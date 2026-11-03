@@ -29,7 +29,7 @@
 #samolet{padding:88px var(--pad) 72px}
 #samolet .case-intro{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;padding-bottom:36px;margin-bottom:28px}
 #samolet .case-title-wrap h1{margin:0;font-size:clamp(74px,8.8889vw,128px);font-weight:400;line-height:1.1;letter-spacing:0}
-#samolet .case-description{max-width:none;font-size:clamp(23px,2.2223vw,32px);line-height:1.1;letter-spacing:0}
+#samolet .case-description{padding:18px 0;max-width:none;font-size:clamp(23px,2.2223vw,32px);line-height:1.1;letter-spacing:0}
 #samolet .case-description p{margin:0 0 24px}
 #samolet .case-description .case-role{margin:0;color:var(--ink);font-size:12px;line-height:1.2;letter-spacing:0}
 #samolet .samolet-gallery{display:flex;flex-direction:column;align-items:stretch;gap:28px}
@@ -46,7 +46,9 @@
 #samolet .samolet-cell{flex:var(--weight) 1 0;min-width:0}
 #samolet .samolet-stack,#samolet .samolet-image-grid{display:flex;flex-direction:column;gap:24px;min-width:0}
 #samolet .samolet-mobile-only{display:none}
-#samolet .samolet-crop{position:relative;aspect-ratio:4/3;overflow:hidden}
+#samolet .samolet-crop{position:relative;aspect-ratio:var(--aspect,4/3);overflow:hidden}
+#samolet .samolet-event-wall{aspect-ratio:16/9;overflow:hidden}
+#samolet .samolet-event-wall img{height:100%;object-fit:cover}
 #samolet .samolet-crop img{position:absolute;left:var(--x);top:var(--y);width:calc(100% * var(--scale));max-width:none}
 #samolet .case-video-frame{position:relative;left:auto;width:100%;margin:0;overflow:visible;background:transparent;transform:none}
 #samolet .case-video{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:none;object-fit:contain;background:var(--paper)}
@@ -69,7 +71,7 @@
   #samolet{padding-top:96px;padding-bottom:40px}
   #samolet .case-intro{grid-template-columns:1fr;gap:24px;padding-bottom:16px;margin-bottom:16px}
   #samolet .case-title-wrap h1{font-size:clamp(48px,15.8975vw,72px)}
-  #samolet .case-description{font-size:23px;line-height:1.2}
+  #samolet .case-description{padding:0;font-size:23px;line-height:1.2}
   #samolet .case-description .case-role{font-size:10px}
   #samolet .samolet-gallery{gap:16px}
   #samolet .case-story,#samolet .case-credits{grid-template-columns:1fr;gap:20px}
@@ -82,6 +84,7 @@
   #samolet .samolet-mobile-stack>.samolet-cell{flex:0 1 auto;width:100%}
   #samolet .samolet-desktop-only{display:none}
   #samolet .samolet-mobile-only{display:flex}
+  #samolet .samolet-event-wall{aspect-ratio:358/238.69580078125}
   #samolet .samolet-crop img{left:var(--mobile-x);top:var(--mobile-y);width:calc(100% * var(--mobile-scale))}
   #samolet .case-caption{font-size:10px}
   #samolet .samolet-motion-thumbnails{gap:6px}
