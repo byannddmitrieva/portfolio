@@ -411,3 +411,59 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
 /* Beauty & Value includes original artwork in several aspect ratios. */
 #beauty-value .media img{aspect-ratio:auto}
 .beauty-gallery .media.pair-left,.beauty-gallery .media.pair-right{align-self:start}
+
+/* PERVERT: final dark editorial case from the approved Figma frames. */
+.pervert-page{
+  --paper:#060607;
+  --ink:#f2f2ed;
+  --muted:#9e9e99;
+  --line:rgba(242,242,237,.2);
+  --pad:36px;
+}
+#pervert{padding-top:88px;padding-bottom:72px}
+#pervert .case-intro{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-bottom:28px;padding-bottom:52px}
+#pervert .case-title-wrap h1{margin:0;font-size:clamp(74px,8.89vw,128px);line-height:1.1;letter-spacing:-.07em}
+#pervert .case-description{font-size:clamp(20px,2.223vw,32px);line-height:1.1;letter-spacing:-.03em}
+#pervert .case-description p{margin:0 0 26px}
+#pervert .case-description .case-role{margin-bottom:18px;color:var(--muted);font-size:12px;line-height:1.2;letter-spacing:0}
+#pervert .case-link{font-size:12px}
+.pervert-gallery{display:grid;gap:28px;min-width:0}
+.pervert-media{min-width:0;margin:0;overflow:hidden;background:#0d0d0f;line-height:0}
+.pervert-media img{display:block;width:100%;height:auto;object-fit:contain;transform:none!important;transition:none}
+.pervert-media--full{width:100%}
+.pervert-pair,.pervert-objects,.pervert-products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;min-width:0}
+.pervert-object-stack{display:contents}
+.pervert-object-phone{grid-column:1;grid-row:1}
+.pervert-object-stack .pervert-media:first-child{grid-column:1/-1;grid-row:2;justify-self:center;width:calc(50% - 8px)}
+.pervert-object-stack .pervert-media:last-child{grid-column:2;grid-row:1}
+.pervert-product-stack{display:grid;align-content:start;gap:16px;min-width:0}
+.pervert-pair--material{grid-template-columns:minmax(0,600fr) minmax(0,744fr)}
+.pervert-pair--tailoring{grid-template-columns:minmax(0,482fr) minmax(0,863fr)}
+.pervert-pair--campaign-end{grid-template-columns:minmax(0,576fr) minmax(0,768fr)}
+.pervert-pair--final{grid-template-columns:minmax(0,898fr) minmax(0,454fr)}
+.pervert-story{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start;padding:52px 0 24px}
+.pervert-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
+.pervert-story p{align-self:center;margin:0;color:var(--muted);font-size:clamp(20px,1.598vw,23px);line-height:1.2;letter-spacing:-.02em}
+.pervert-page .next-project{color:var(--ink)}
+.pervert-page footer{color:var(--ink)}
+
+@media(max-width:900px){
+  .pervert-page{--pad:18px}
+  #pervert{padding-top:96px;padding-bottom:40px}
+  #pervert .case-intro{grid-template-columns:1fr;gap:28px;margin-bottom:16px;padding-bottom:20px}
+  #pervert .case-title-wrap h1{font-size:clamp(64px,17.949vw,100px)}
+  #pervert .case-description{font-size:19px;line-height:1.2}
+  #pervert .case-description p{margin-bottom:16px}
+  #pervert .case-description .case-role{margin-bottom:14px;font-size:10px}
+  #pervert .case-link{font-size:10px}
+  .pervert-gallery{gap:16px}
+  .pervert-pair,.pervert-objects,.pervert-products,.pervert-pair--material,.pervert-pair--tailoring,.pervert-pair--campaign-end,.pervert-pair--final{grid-template-columns:1fr;gap:16px}
+  .pervert-object-stack{display:grid;gap:16px;min-width:0}
+  .pervert-object-phone,.pervert-object-stack .pervert-media:first-child,.pervert-object-stack .pervert-media:last-child{grid-column:auto;grid-row:auto;width:auto}
+  .pervert-product-stack{gap:16px}
+  .pervert-pair--boutique{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pervert-story{grid-template-columns:1fr;gap:16px;padding:32px 0 8px}
+  .pervert-story h2{font-size:30px}
+  .pervert-story p{font-size:19px;line-height:1.2}
+  .pervert-desktop-only{display:none}
+}
