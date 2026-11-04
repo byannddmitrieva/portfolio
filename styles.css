@@ -49,7 +49,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .language-switcher a[aria-current="page"]:after{transform:scaleX(1)}
 .menu-toggle{display:none;border:0;background:none;padding:0;line-height:1.2}
 .arrow-icon,.project-arrow,.next-project>span:last-child{display:none}
-.hero{height:118svh;border-bottom:1px solid var(--line)}
+.hero{height:118svh}
 .hero-stage{position:sticky;top:0;height:100svh;min-height:620px;overflow:hidden;isolation:isolate}
 .hero-location,.hero-role,.hero-foot{position:absolute;z-index:6;margin:0;font-size:11px;line-height:1.2;letter-spacing:.06em;text-transform:uppercase}
 .hero-location{left:var(--pad);top:47%}
@@ -73,7 +73,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 @keyframes hero-surname-in{to{transform:translateX(0);opacity:1}}
 @keyframes hero-portrait-in{to{transform:translateX(-50%) scale(1);opacity:1;filter:blur(0)}}
 @keyframes hero-meta-in{to{opacity:1}}
-.selected{padding:14vh var(--pad) 20vh}
+.selected{padding:4.5vh var(--pad) 20vh}
 .section-head{display:flex;justify-content:space-between;align-items:end;padding-bottom:clamp(12px,1.2vw,20px)}
 .work-filters{display:flex;flex-wrap:wrap;align-items:center;gap:0}
 .hero-foot.work-filters{right:var(--pad);margin:0}
@@ -92,6 +92,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .project-year,.project-no{display:none}
 .project-preview{position:absolute;inset:0;z-index:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
 .project-preview img{width:100%;height:100%;max-height:none;object-fit:cover;transition:transform .7s var(--ease)}
+.project-industry{position:absolute;z-index:1;right:clamp(16px,1.7vw,24px);bottom:clamp(16px,1.7vw,24px);max-width:calc(100% - 32px);color:#fff;font-size:9px;font-weight:500;line-height:1.2;letter-spacing:.08em;text-transform:uppercase;text-align:right;pointer-events:none}
+.project-industry--dark{color:#11110f}
 .project-row:hover .project-preview img,.project-row:focus-visible .project-preview img{transform:scale(1.025)}
 .next-project[href="#nova"]:before,.next-project[href$="nova.html"]:before{background:var(--nova-hover)}
 .case{padding:15vh var(--pad) 20vh;border-top:1px solid var(--line);scroll-margin-top:0}
@@ -119,42 +121,42 @@ button{font:inherit;color:inherit;cursor:pointer}
 .figma-case-gallery .media{background:#131212}
 .figma-case-gallery .media img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;transform:none!important;transition:none}
 /* Port Emm: editorial sequence approved in Figma. */
-:is(#port-emm,#nova){padding-top:88px;padding-bottom:72px}
-:is(#port-emm,#nova) .case-intro{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-bottom:28px;padding-bottom:52px}
-:is(#port-emm,#nova) .case-title-wrap h1{margin:0;font-size:clamp(74px,8.89vw,128px);letter-spacing:-.07em}
-:is(#port-emm,#nova) .case-description{font-size:clamp(20px,2.223vw,32px);letter-spacing:-.03em}
-:is(#port-emm,#nova) .case-description p{margin:0 0 26px}
-:is(#port-emm,#nova) .case-description .case-role{margin-bottom:0;font-size:12px;letter-spacing:0}
-:is(#port-emm,#nova) .case-gallery{gap:28px}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value){padding-top:88px;padding-bottom:72px}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-intro{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-bottom:28px;padding-bottom:52px}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-title-wrap h1{margin:0;font-size:clamp(74px,8.89vw,128px);letter-spacing:-.07em}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-description{font-size:clamp(20px,2.223vw,32px);letter-spacing:-.03em}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-description p{margin:0 0 26px}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-description .case-role{margin-bottom:0;font-size:12px;letter-spacing:0}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-gallery{gap:28px}
 #port-emm .media.pair-left{grid-column:1/7}
 #port-emm .media.pair-right{grid-column:7/-1}
 #port-emm .media{background:transparent}
 #port-emm .media img{height:auto;aspect-ratio:16/9;object-fit:contain;transform:none!important;transition:none}
-:is(#port-emm,#nova) .case-story,:is(#port-emm,#nova) .case-credits{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
-:is(#port-emm,#nova) .case-story{padding:52px 0 24px}
-:is(#port-emm,#nova) .case-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
-:is(#port-emm,#nova) .case-story p{margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story,:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-credits{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story{padding:52px 0 24px}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story h2{margin:0;font-size:clamp(30px,3.194vw,46px);line-height:1.1;font-weight:400;letter-spacing:-.04em}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story p{align-self:center;margin:0;font-size:clamp(20px,1.598vw,23px);line-height:1.1}
 #port-emm .case-video-frame{left:auto;width:100%;transform:none}
 #port-emm .case-video{aspect-ratio:40/27;max-height:none}
 #port-emm .case-caption{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.2}
-:is(#port-emm,#nova) .case-credits{padding-top:40px;font-size:17px;line-height:1.2}
-:is(#port-emm,#nova) .case-credits p{margin:0}
-:is(#port-emm,#nova) .case-credits p+p{color:var(--muted)}
-:is(#port-emm,#nova) .case-credits a{text-decoration:underline;text-underline-offset:3px}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-credits{padding-top:40px;font-size:17px;line-height:1.2}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-credits p{margin:0}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-credits p+p{color:var(--muted)}
+:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-credits a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:900px){
-  :is(#port-emm,#nova){padding-top:96px;padding-bottom:40px}
-  :is(#port-emm,#nova) .case-intro,:is(#port-emm,#nova) .case-story,:is(#port-emm,#nova) .case-credits{grid-template-columns:1fr;gap:16px}
-  :is(#port-emm,#nova) .case-intro{gap:28px;margin-bottom:16px;padding-bottom:20px}
-  :is(#port-emm,#nova) .case-title-wrap h1{font-size:clamp(64px,19vw,100px)}
-  :is(#port-emm,#nova) .case-description{font-size:19px;line-height:1.2}
-  :is(#port-emm,#nova) .case-description .case-role{font-size:10px}
-  :is(#port-emm,#nova) .case-gallery{gap:16px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value){padding-top:96px;padding-bottom:40px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-intro,:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story,:is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-credits{grid-template-columns:1fr;gap:16px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-intro{gap:28px;margin-bottom:16px;padding-bottom:20px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-title-wrap h1{font-size:clamp(64px,19vw,100px)}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-description{font-size:19px;line-height:1.2}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-description .case-role{font-size:10px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-gallery{gap:16px}
   #port-emm .media.pair-left,#port-emm .media.pair-right{grid-column:1/-1}
-  :is(#port-emm,#nova) .case-story{padding:32px 0 8px}
-  :is(#port-emm,#nova) .case-story h2{font-size:30px}
-  :is(#port-emm,#nova) .case-story p{font-size:19px;line-height:1.2}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story{padding:32px 0 8px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story h2{font-size:30px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-story p{font-size:19px;line-height:1.2}
   #port-emm .case-caption{font-size:9px}
-  :is(#port-emm,#nova) .case-credits{padding-top:24px;font-size:13px}
+  :is(#port-emm,#nova,#acteave,#olga-shafieva,#beauty-value) .case-credits{padding-top:24px;font-size:13px}
 }
 .motion-slider{margin-top:var(--pad)}
 .motion-viewport{position:relative;aspect-ratio:2/1;overflow:hidden;background:#111}
@@ -261,7 +263,7 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
 }
 @media(max-width:520px){
   :root{--pad:16px}
-  .selected{padding-top:11vh;padding-bottom:14vh}
+  .selected{padding-top:4vh;padding-bottom:14vh}
   .hero-foot.work-filters{right:16px}
   .work-filter{font-size:9.5px;line-height:1.2}
   .work-filter+.work-filter:before{margin:0 6px}
@@ -310,6 +312,75 @@ footer .footer-meta{display:flex;align-items:center;gap:50px}
   .hero-name,.hero-surname,.hero-location,.hero-role,.hero-foot{opacity:1!important;transform:none!important}
   .js .reveal-media,.js .reveal-content{opacity:1;transform:none}
 }
+
+/* NOVA: current user-edited Figma case. Text remains semantic; project compositions are original exports. */
+.nova-page{--paper:#1c1d19;--ink:#f1efe7;--muted:#b4b1a5;--line:rgba(241,239,231,.22);--pad:36px}
+#nova .case-story p{color:var(--muted)}
+#nova .nova-art{margin:0;min-width:0;grid-column:1/-1}
+#nova .nova-art picture{display:block}
+#nova .nova-art img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+#nova .nova-physical{grid-column:1/-1;display:grid;gap:16px;min-width:0}
+#nova .nova-mobile-only{display:none}
+#nova .next-project:hover,#nova .next-project:focus-visible{color:#1c1d19}
+.project-row[data-project="nova"] .project-preview img{object-position:left center}
+@media(max-width:900px){
+  .nova-page{--pad:18px}
+  #nova{padding-top:48px}
+  #nova .case-title-wrap h1{font-size:clamp(64px,18.97436vw,100px)}
+  #nova .case-description p{margin-bottom:16px}
+  #nova .case-description .case-role{margin-bottom:0}
+  #nova .case-credits{min-height:107px}
+  #nova .nova-mobile-only{display:block}
+}
+
+/* ACTEAVE: approved Figma frames 2256:2972 and 2256:3027. */
+.acteave-page{--pad:36px}
+#acteave .case-title-wrap h1{font-size:clamp(64px,7.36112vw,106px);letter-spacing:-.065em}
+#acteave .case-story p{color:var(--muted);line-height:1.2}
+#acteave .acteave-art{grid-column:1/-1;margin:0;min-width:0}
+#acteave .acteave-art a{display:block;cursor:zoom-in}
+#acteave .acteave-art img{width:100%;height:auto;object-fit:contain}
+#acteave .acteave-logo{grid-column:1/-1;display:flex;align-items:center;justify-content:center;margin:0;min-width:0;height:340px;background:#e4e4e4}
+#acteave .acteave-logo img{width:640px;max-width:calc(100% - 72px);height:auto;object-fit:contain}
+@media(max-width:900px){
+  .acteave-page{--pad:18px}
+  #acteave{padding-top:96px}
+  #acteave .case-title-wrap h1{font-size:clamp(48px,14.102565vw,100px)}
+  #acteave .case-description p{margin-bottom:16px}
+  #acteave .case-description .case-role{margin-bottom:0}
+  #acteave .acteave-logo{height:180px}
+  #acteave .acteave-logo img{width:270px}
+}
+.project-row[data-project="acteave"] .project-preview{background:#e4e4e4}
+.project-row[data-project="acteave"] .project-preview img{object-fit:contain;transform:none}
+
+/* Olga Shafieva: complete presentation slides, with no additional cropping. */
+.project-row[data-project="olga-shafieva"] .project-preview img{object-fit:contain;transform:none}
+@font-face{font-family:"Case Inter";src:url("assets/fonts/inter-latin.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:block;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Case Inter";src:url("assets/fonts/inter-latin-ext.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:block;unicode-range:U+0100-02FF,U+0300-036F,U+1E00-1EFF}
+@font-face{font-family:"Case Inter";src:url("assets/fonts/inter-cyrillic.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:block;unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+:is(.olga-page,.beauty-page),:is(.olga-page,.beauty-page) .case-title-wrap h1{font-family:"Case Inter",Inter,Arial,sans-serif}
+:is(#olga-shafieva,#beauty-value) .case-intro>*,:is(#olga-shafieva,#beauty-value) .case-story>*{min-width:0}
+:is(#olga-shafieva,#beauty-value) .case-title-wrap h1{font-size:clamp(64px,7.5vw,108px);line-height:1.1}
+:is(#olga-shafieva,#beauty-value) .case-description .case-role{line-height:1.2}
+:is(#olga-shafieva,#beauty-value) .case-story p{color:var(--muted);line-height:1.2}
+:is(#olga-shafieva,#beauty-value) .media{background:transparent;overflow:visible}
+:is(#olga-shafieva,#beauty-value) .media.pair-left{grid-column:1/7}
+:is(#olga-shafieva,#beauty-value) .media.pair-right{grid-column:7/-1}
+:is(#olga-shafieva,#beauty-value) .media a{display:block;cursor:zoom-in}
+:is(#olga-shafieva,#beauty-value) .media img{width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;transform:none!important;transition:none}
+:is(#olga-shafieva,#beauty-value) .case-caption{grid-column:1/-1;margin:-16px 0 0;color:var(--muted);font-size:12px;line-height:1.2}
+:is(#olga-shafieva,#beauty-value) .case-story:first-of-type{padding-top:24px}
+@media(max-width:900px){
+  :is(#olga-shafieva,#beauty-value) .case-title-wrap h1{font-size:clamp(54px,16vw,100px)}
+  :is(#olga-shafieva,#beauty-value) .media.pair-left,:is(#olga-shafieva,#beauty-value) .media.pair-right{grid-column:1/-1}
+  :is(#olga-shafieva,#beauty-value) .case-caption{margin:-4px 0 0;font-size:11px}
+}
+
+/* Beauty & Value includes original artwork in several aspect ratios. */
+#beauty-value .media img{aspect-ratio:auto}
+.beauty-gallery .media.pair-left,.beauty-gallery .media.pair-right{align-self:start}
+
 /* PERVERT: final dark editorial case from the approved Figma frames. */
 .pervert-page{
   --paper:#060607;

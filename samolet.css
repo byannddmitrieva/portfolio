@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/inter-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/inter-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(assets/fonts/inter-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Samolet: approved Figma case, scoped to preserve the other portfolio pages. */
+.samolet-page{--paper:#f1f2f3;--ink:#131416;--pad:36px}
+.samolet-fonts-pending #samolet{visibility:hidden}
+#samolet{padding:88px var(--pad) 72px}
+#samolet .case-intro{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;padding-bottom:36px;margin-bottom:28px}
+#samolet .case-title-wrap h1{margin:0;font-size:clamp(74px,8.8889vw,128px);font-weight:400;line-height:1.1;letter-spacing:0}
+#samolet .case-description{padding:18px 0;max-width:none;font-size:clamp(23px,2.2223vw,32px);line-height:1.1;letter-spacing:0}
+#samolet .case-description p{margin:0 0 24px}
+#samolet .case-description .case-role{margin:0;color:var(--ink);font-size:12px;line-height:1.2;letter-spacing:0}
+#samolet .samolet-gallery{display:flex;flex-direction:column;align-items:stretch;gap:28px}
+#samolet .case-story,#samolet .case-credits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start;min-width:0}
+#samolet .case-story{padding:64px 0 16px}
+#samolet .case-story h2{margin:0;font-size:clamp(30px,3.1945vw,46px);font-weight:400;line-height:1.1;letter-spacing:0}
+#samolet .samolet-mobile-break{display:none}
+#samolet .samolet-copy{min-width:0;font-size:clamp(19px,1.5973vw,23px);line-height:1.2}
+#samolet .samolet-copy p{margin:0}
+#samolet .samolet-copy p+p{margin-top:1.2em}
+#samolet .samolet-art{margin:0;min-width:0;background:transparent}
+#samolet .samolet-art img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}
+#samolet .samolet-row{display:flex;align-items:flex-start;gap:24px;min-width:0}
+#samolet .samolet-cell{flex:var(--weight) 1 0;min-width:0}
+#samolet .samolet-stack,#samolet .samolet-image-grid{display:flex;flex-direction:column;gap:24px;min-width:0}
+#samolet .samolet-mobile-only{display:none}
+#samolet .samolet-crop{position:relative;aspect-ratio:var(--aspect,4/3);overflow:hidden}
+#samolet .samolet-event-wall{aspect-ratio:16/9;overflow:hidden}
+#samolet .samolet-event-wall img{height:100%;object-fit:cover}
+#samolet .samolet-crop img{position:absolute;left:var(--x);top:var(--y);width:calc(100% * var(--scale));max-width:none}
+#samolet .case-video-frame{position:relative;left:auto;width:100%;margin:0;overflow:visible;background:transparent;transform:none}
+#samolet .case-video{display:block;width:100%;height:auto;aspect-ratio:16/9;max-height:none;object-fit:contain;background:var(--paper)}
+#samolet .case-caption{margin:10px 0 0;font-size:11px;line-height:1.2}
+#samolet .sound-video-frame .video-sound-toggle{top:16px;right:16px;bottom:auto}
+#samolet .samolet-motion{margin:0;min-width:0}
+#samolet .motion-viewport{background:var(--paper)}
+#samolet .samolet-motion-thumbnails{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:12px}
+#samolet .samolet-motion-thumb{display:block;min-width:0;min-height:44px;padding:0;border:0;background:transparent;opacity:.7;transition:opacity .2s ease}
+#samolet .samolet-motion-thumb[aria-pressed="true"],#samolet .samolet-motion-thumb:hover{opacity:1}
+#samolet .samolet-motion-thumb img{display:block;width:100%;height:auto;aspect-ratio:2/1;object-fit:contain}
+#samolet .motion-controls{flex-wrap:wrap;gap:8px 16px;padding-top:10px;border:0}
+#samolet .motion-controls h3{font-size:11px;letter-spacing:0}
+#samolet .motion-navigation{margin-left:auto}
+#samolet .case-credits{padding-top:48px;font-size:17px;line-height:1.2}
+#samolet .case-credits p{margin:0;min-width:0}
+#samolet .case-credits a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){
+  .samolet-page{--pad:16px}
+  #samolet{padding-top:96px;padding-bottom:40px}
+  #samolet .case-intro{grid-template-columns:1fr;gap:24px;padding-bottom:16px;margin-bottom:16px}
+  #samolet .case-title-wrap h1{font-size:clamp(48px,15.8975vw,72px)}
+  #samolet .case-description{padding:0;font-size:23px;line-height:1.2}
+  #samolet .case-description .case-role{font-size:10px}
+  #samolet .samolet-gallery{gap:16px}
+  #samolet .case-story,#samolet .case-credits{grid-template-columns:1fr;gap:20px}
+  #samolet .case-story{padding:34px 0 16px}
+  #samolet .case-story h2{font-size:30px;line-height:1.1}
+  #samolet .samolet-mobile-break{display:revert}
+  #samolet .samolet-copy{font-size:16px;line-height:1.2}
+  #samolet .samolet-row,#samolet .samolet-stack,#samolet .samolet-image-grid{gap:16px}
+  #samolet .samolet-mobile-stack{flex-direction:column;align-items:stretch}
+  #samolet .samolet-mobile-stack>.samolet-cell{flex:0 1 auto;width:100%}
+  #samolet .samolet-desktop-only{display:none}
+  #samolet .samolet-mobile-only{display:flex}
+  #samolet .samolet-event-wall{aspect-ratio:358/238.69580078125}
+  #samolet .samolet-crop img{left:var(--mobile-x);top:var(--mobile-y);width:calc(100% * var(--mobile-scale))}
+  #samolet .case-caption{font-size:10px}
+  #samolet .samolet-motion-thumbnails{gap:6px}
+  #samolet .motion-controls h3{font-size:10px}
+  #samolet .case-credits{padding-top:32px;font-size:14px}
+}
