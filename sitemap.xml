@@ -78,14 +78,12 @@
   <url>
     <loc>https://byannadmitrieva.com/privacy.html</loc>
   </url>
+  <url><loc>https://byannadmitrieva.com/projects/acteave.html</loc></url>
   <url>
-    <loc>https://byannadmitrieva.com/projects/acteave.html</loc>
+    <loc>https://byannadmitrieva.com/ru/projects/acteave.html</loc>
   </url>
   <url>
     <loc>https://byannadmitrieva.com/de/projects/acteave.html</loc>
-  </url>
-  <url>
-    <loc>https://byannadmitrieva.com/ru/projects/acteave.html</loc>
   </url>
   <url>
     <loc>https://byannadmitrieva.com/projects/letty.html</loc>
@@ -100,9 +98,9 @@
     <loc>https://byannadmitrieva.com/projects/olga-shafieva.html</loc>
   </url>
   <url>
-    <loc>https://byannadmitrieva.com/de/projects/olga-shafieva.html</loc>
+    <loc>https://byannadmitrieva.com/ru/projects/olga-shafieva.html</loc>
   </url>
   <url>
-    <loc>https://byannadmitrieva.com/ru/projects/olga-shafieva.html</loc>
+    <loc>https://byannadmitrieva.com/de/projects/olga-shafieva.html</loc>
   </url>
 </urlset>
