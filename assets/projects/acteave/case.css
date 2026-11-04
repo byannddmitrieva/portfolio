@@ -1,0 +1,19 @@
+/* Acteave: scoped case layout; original artwork remains uncropped. */
+.acteave-case{--acteave-olive:#7d8d27;--acteave-ink:#20271e;--acteave-paper:#f4f1e8}
+.acteave-story{color:var(--acteave-ink);background:var(--acteave-paper)}
+.acteave-chapter{padding:clamp(32px,5vw,90px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(24px,4vw,64px)}
+.acteave-chapter-copy{min-width:0}.acteave-eyebrow{font-size:12px;letter-spacing:.1em;margin:0 0 30px}
+.acteave-chapter h2{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(40px,6vw,104px);line-height:1.02;letter-spacing:-.025em;font-weight:400;margin:0 0 28px;text-wrap:balance;overflow-wrap:break-word}
+.acteave-chapter h3{font-weight:400;font-size:clamp(24px,3vw,44px);margin:0 0 24px}
+.acteave-chapter p:not(.acteave-eyebrow){max-width:860px;font-size:clamp(18px,1.8vw,27px);line-height:1.5;margin:0 0 22px}
+.acteave-chapter .acteave-scope{font-size:13px!important;color:var(--muted)}
+.acteave-story .media{background:transparent;width:100%;min-width:0}.acteave-story .media img{width:100%;height:auto;display:block;aspect-ratio:var(--art-ratio)!important;object-fit:contain!important;transform:none!important;transition:none!important}
+.acteave-story>.media{background:#e4e4e4}
+.acteave-dark{background:var(--acteave-ink);color:var(--acteave-paper)}
+.acteave-olive{background:var(--acteave-olive);color:white}
+.acteave-flavor{background:#e5e5e5}.acteave-olive>.media{grid-column:auto;max-width:560px;justify-self:center}.acteave-flavor .media{grid-column:auto;max-width:740px;margin:0 auto}
+.acteave-chapter:nth-of-type(3) .media{max-width:820px;margin:16px auto}
+@media(min-width:1000px){.acteave-olive,.acteave-flavor{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center}.acteave-olive h2,.acteave-flavor h2{font-size:clamp(48px,4.6vw,80px)}}
+@media(max-width:520px){.acteave-chapter{padding:28px 20px}.acteave-eyebrow{font-size:10px;line-height:1.5;margin-bottom:22px}.acteave-chapter h2{margin-bottom:22px}.acteave-chapter p:not(.acteave-eyebrow){font-size:17px}.acteave-case .case-title-wrap h1{font-size:clamp(54px,18vw,90px)}}
+
+.acteave-chapter.acteave-daily{padding:0;gap:0;background:#e5e5e5}.acteave-daily .acteave-chapter-copy{padding:clamp(32px,5vw,90px) clamp(32px,5vw,90px) 0}.acteave-daily .acteave-chapter-copy h2{margin-bottom:0}@media(max-width:520px){.acteave-daily .acteave-chapter-copy{padding:28px 20px 0}}
