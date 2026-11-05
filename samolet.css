@@ -95,6 +95,13 @@
   #samolet .samolet-mobile-gallery>.samolet-cell:last-child{
     scroll-snap-align:end;
   }
+  #samolet .samolet-image-direction .samolet-mobile-gallery>.samolet-cell{
+    width:auto;
+  }
+  #samolet .samolet-image-direction .samolet-mobile-gallery img{
+    width:auto;
+    height:min(calc((100vw - 32px) * .5467), 227px);
+  }
   #samolet .samolet-desktop-only{display:none}
   #samolet .samolet-mobile-only{display:flex}
   #samolet .samolet-event-wall{aspect-ratio:358/238.69580078125}
