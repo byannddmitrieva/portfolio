@@ -155,18 +155,6 @@ document.querySelectorAll('.work-filters').forEach(filterGroup => {
   });
 });
 
-const cursor = document.querySelector('.cursor');
-if(matchMedia('(pointer:fine)').matches){
-  addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-  });
-  document.querySelectorAll('.next-project, .media').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('visible'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
-  });
-}
-
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#menu');
 const mobileNavigation = matchMedia('(max-width: 900px)');
