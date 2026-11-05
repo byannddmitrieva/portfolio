@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Button / scroll to Recognition" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M35.4375 18C35.4375 27.6305 27.6305 35.4375 18 35.4375C8.36953 35.4375 0.5625 27.6305 0.5625 18C0.5625 8.36953 8.36953 0.5625 18 0.5625C27.6305 0.5625 35.4375 8.36953 35.4375 18Z" stroke-width="1.125" stroke="white" stroke-opacity="0.45"/>
+<path id="Vector_2" d="M18 11.25V24.75M23.25 19.5L18 24.75L12.75 19.5" stroke-width="1.3125" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="36" height="36" fill="white"/>
+</clipPath>
+</defs>
+</svg>

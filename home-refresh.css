@@ -18,9 +18,26 @@
 .home-stat-dark .home-pill{border-color:#737370}
 .home-stat-experience{min-height:360px}
 .home-stat-experience strong{font-size:180px}
+.home-stat-value{display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.home-stat-label{font-size:32px;line-height:1.1;letter-spacing:-.03em}
+.home-stat-experience .home-stat-value{flex-direction:row;align-items:baseline;gap:0}
+.home-stat-experience .home-stat-label{font-size:48px}
+.home-stat-top{display:flex;justify-content:space-between;gap:8px;width:100%;align-items:flex-start}
+.home-proof-recognition{display:block;flex:none;width:48px;height:48px}
+.home-proof-icon-desktop{display:block;max-width:none}
+.home-proof-icon-mobile,.home-stat-description-mobile{display:none}
+.home-proof-image{position:relative;color:#fff}
+.home-proof-image::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.62));pointer-events:none}
+.home-proof-latest{position:absolute;left:32px;bottom:32px;z-index:1;display:flex;flex-direction:column;gap:6px}
+.home-proof-eyebrow{font-size:12px;font-weight:500;line-height:1.2;letter-spacing:.12em;color:rgba(255,255,255,.8)}
+.home-proof-project{font-size:48px;line-height:.9;letter-spacing:-.04em}
+.home-proof-category{display:none}
+.home-proof-open{position:absolute;right:32px;bottom:32px;width:60px;height:60px;z-index:1}
+.home-proof-image:focus-visible,.home-proof-recognition:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.home-proof-image:hover .home-proof-project{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.1em}
 .home-stat-0{background:#e0e0e0}.home-stat-1{background:#fff}.home-stat-2{background:#ccc}
 .home-proof-image{display:block;height:360px;overflow:hidden;border-radius:var(--home-radius)}
-.home-proof-image img{height:100%;width:100%;object-fit:cover}
+.home-proof-image .home-proof-photo{height:100%;width:100%;object-fit:cover}
 .home-proof-bottom{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .home-refresh .home-work{padding-top:0;padding-bottom:100px;scroll-margin-top:76px}
 .home-work>.work-filters{margin:0 0 26px;flex-wrap:wrap}
@@ -106,6 +123,8 @@ html[lang="de"] .home-refresh .home-contact h2,html[lang="ru"] .home-refresh .ho
  .home-service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
  .home-stat{padding:24px}.home-stat strong{font-size:72px}
  .home-stat-experience strong{font-size:150px}
+ .home-stat-label{font-size:26px}
+ .home-stat-experience .home-stat-label{font-size:38px}
  .home-section-head h2,.home-section-number{font-size:clamp(60px,9vw,125px)}
  .home-refresh .home-about{gap:32px}.home-about p{font-size:18px}.home-refresh .home-about .about-lead{font-size:24px}
  .home-contact-link{font-size:clamp(32px,4.1667vw,50px)}
@@ -120,9 +139,22 @@ html[lang="de"] .home-refresh .home-contact h2,html[lang="ru"] .home-refresh .ho
  .home-proof{gap:10px;padding-bottom:56px}
  .home-proof-top{grid-template-columns:1fr;gap:10px}
  .home-stat{min-height:190px;padding:20px;gap:16px}
- .home-stat-experience{min-height:230px}.home-stat-experience strong{font-size:96px}
+ .home-stat-experience{min-height:270px}.home-stat-experience strong{font-size:96px}
  .home-stat strong{font-size:52px}.home-stat-experience strong{font-size:96px}
  .home-stat p{font-size:13px;line-height:1.35}
+ .home-proof-bottom .home-stat{min-height:224px}
+ .home-stat-value{gap:2px}
+ .home-stat-label{font-size:22px}
+ .home-stat-experience .home-stat-label{font-size:32px}
+ .home-stat-1{border:1px solid #d1d1cc}
+ .home-proof-icon-desktop,.home-stat-description-desktop{display:none}
+ .home-proof-icon-mobile,.home-stat-description-mobile{display:block}
+ .home-proof-latest{left:18px;bottom:18px;gap:4px}
+ .home-proof-eyebrow{font-size:10px}
+ .home-proof-project{font-size:30px;line-height:1}
+ .home-proof-category{display:block;font-size:13px;line-height:1.2;color:rgba(255,255,255,.75)}
+ .home-proof-open{right:18px;bottom:18px;width:44px;height:44px}
+ .home-proof-recognition{width:36px;height:36px}
  .home-proof-image{height:200px}
  .home-proof-bottom{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
  .home-refresh .home-work{padding-bottom:56px}
