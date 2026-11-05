@@ -82,6 +82,19 @@
   #samolet .samolet-row,#samolet .samolet-stack,#samolet .samolet-image-grid{gap:16px}
   #samolet .samolet-mobile-stack{flex-direction:column;align-items:stretch}
   #samolet .samolet-mobile-stack>.samolet-cell{flex:0 1 auto;width:100%}
+  #samolet .samolet-mobile-gallery{
+    overflow-x:auto;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+  }
+  #samolet .samolet-mobile-gallery>.samolet-cell{
+    flex:none;
+    width:min(82%, 340px);
+    scroll-snap-align:start;
+  }
+  #samolet .samolet-mobile-gallery>.samolet-cell:last-child{
+    scroll-snap-align:end;
+  }
   #samolet .samolet-desktop-only{display:none}
   #samolet .samolet-mobile-only{display:flex}
   #samolet .samolet-event-wall{aspect-ratio:358/238.69580078125}
